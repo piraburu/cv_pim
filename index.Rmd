@@ -1,0 +1,189 @@
+---
+title: "Pedro Iraburu's CV"
+author: Pedro Iraburu
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(glue)
+library(tidyverse)
+
+# ======================================================================
+# These variables determine how the the data is loaded and how the exports are
+# done.
+
+# Data stored in google sheets
+using_googlesheets <- TRUE
+
+# Copied URL from the sheet
+positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1R1vU59U_SohWENOIAlgyDbYPHmiTL_7TmxEuW01Rpmw/edit?usp=sharing"
+
+# Is this sheet available for anyone to read? If you're using a private sheet
+# set this to false and go to gather_data.R and run the data loading manually
+# once to cache authentication
+sheet_is_publicly_readable <- TRUE
+
+# PDF EXPORT=T to have links turned into footnotes at the end of the doc
+PDF_EXPORT <- FALSE
+
+
+# A global (gasp) variable that holds all the links that were inserted for
+# placement at the end
+links <- c()
+
+# ======================================================================
+# Now we source two external scripts. One contains functions for building the
+# text output and the other loads up our data from either googlesheets or csvs
+
+# Functions for building sections from CSV data
+source('parsing_functions.R') 
+
+# Load data for CV/Resume
+source('gather_data.R')
+```
+
+
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
+
+Aside
+================================================================================
+![logo](foto.jpeg){width=80%}
+
+<i class="fas fa-download"></i> Download this resume in [PDF](https://github.com/piraburu/cv_pim/blob/master/cv.pdf)
+or view online in [html](https://htmlpreview.github.io/?https://github.com/piraburu/cv_pim/blob/master/index.html)
+
+
+
+
+Contact info {#contact}
+--------------------------------------------------------------------------------
+<i class="fa fa-envelope"></i> pedro.iraburu@gmail.com <br />
+<i class="fa fa-phone"></i> 0034 671 055 756 <br />
+<i class="fa fa-github"></i> [GitHub: `@`piraburu](https://github.com/piraburu) <br />
+(Work in progress)
+
+Programming Skills {#skills}
+--------------------------------------------------------------------------------
+
+<img src="https://icon-icons.com/icons2/2107/PNG/32/file_type_r_icon_130212.png" width="15" height="18"/> `R`
+
+<img src="https://icon-icons.com/icons2/112/PNG/32/python_18894.png" width="15" height="18"/> `Python`
+
+<img src="https://img.icons8.com/nolan/64/matlab.png" width="15" height="18"/> `Matlab`
+
+<img src="https://icon-icons.com/icons2/2148/PNG/32/latex_icon_132257.png" width="15" height="18"/> `LaTeX`
+
+<img src="https://icon-icons.com/icons2/1524/PNG/32/markdown_106519.png" width="15" height="18"/> `Markdown`
+
+<img src="https://icon-icons.com/icons2/2107/PNG/32/file_type_stata_icon_130148.png" width="15" height="18"/> `Stata`
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+Code available on <i class="fa fa-github"></i>  [GitHub](https://github.com/piraburu/cv_pim/)
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Pedro Iraburu {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+print_text_block(text_blocks, 'intro')
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+
+Skills {data-icon=wrench data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'skills')
+```
+
+
+
+Languages {data-icon=globe data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'languages')
+```
+<br />
+<br />
+
+Future projects and plans {data-icon=project-diagram data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'Projects & Future plans')
+```
+
+
+Work experience {data-icon=briefcase data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'Work experience')
+```
+
+
+
+
+```{r}
+if(PDF_EXPORT){
+  cat("
+  
+Links {data-icon=link}
+--------------------------------------------------------------------------------
+
+<br>
+
+
+")
+  
+  walk2(links, 1:length(links), function(link, index){
+    print(glue('{index}. {link}'))
+  })
+}
+```
+
+
