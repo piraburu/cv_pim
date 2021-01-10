@@ -81,8 +81,9 @@ Contact info {#contact}
 --------------------------------------------------------------------------------
 <i class="fa fa-envelope"></i> pedro.iraburu@gmail.com <br />
 <i class="fa fa-phone"></i> 0034 671 055 756 <br />
+<i class="fa fa-phone"></i> 0031  687 613 348 <br />
 <i class="fa fa-github"></i> [GitHub: `@`piraburu](https://github.com/piraburu) <br />
-(Work in progress)
+
 
 Programming Skills {#skills}
 --------------------------------------------------------------------------------
@@ -164,8 +165,6 @@ Work experience {data-icon=briefcase data-concise=true}
 ```{r}
 print_section(position_data, 'Work experience')
 ```
-
-
 
 
 ```{r}
