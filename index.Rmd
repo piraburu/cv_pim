@@ -83,7 +83,8 @@ Contact info {#contact}
 <i class="fa fa-phone"></i> 0034 671 055 756 <br />
 <i class="fa fa-phone"></i> 0031  687 613 348 <br />
 <i class="fa fa-github"></i> [GitHub: `@`piraburu](https://github.com/piraburu) <br />
-
+<i class="fab fa-linkedin"></i> [Linkedin](https://www.linkedin.com/in/pedro-iraburu-mu%C3%B1oz-24b533185/) <br />
+<i class="fas fa-home"></i> Dalsteindreef 3312, Diemen <br />
 
 Programming Skills {#skills}
 --------------------------------------------------------------------------------
@@ -93,6 +94,8 @@ Programming Skills {#skills}
 <img src="https://icon-icons.com/icons2/112/PNG/32/python_18894.png" width="15" height="18"/> `Python`
 
 <img src="https://img.icons8.com/nolan/64/matlab.png" width="15" height="18"/> `Matlab`
+
+<img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vba_icon_130097.png" width="15" height="18"/> `VBA`
 
 <img src="https://icon-icons.com/icons2/2148/PNG/32/latex_icon_132257.png" width="15" height="18"/> `LaTeX`
 
@@ -140,6 +143,19 @@ Skills {data-icon=wrench data-concise=true}
 print_section(position_data, 'skills')
 ```
 
+Work experience {data-icon=briefcase data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'Work experience')
+```
+
+Future projects and plans {data-icon=project-diagram data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'Projects & Future plans')
+```
 
 
 Languages {data-icon=globe data-concise=true}
@@ -151,20 +167,9 @@ print_section(position_data, 'languages')
 <br />
 <br />
 
-Future projects and plans {data-icon=project-diagram data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'Projects & Future plans')
-```
 
 
-Work experience {data-icon=briefcase data-concise=true}
---------------------------------------------------------------------------------
 
-```{r}
-print_section(position_data, 'Work experience')
-```
 
 
 ```{r}
