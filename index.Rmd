@@ -126,6 +126,9 @@ print_text_block(text_blocks, 'intro')
 ```
 
 
+```{r}
+print_text_block(text_blocks, 'intro2')
+```
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
