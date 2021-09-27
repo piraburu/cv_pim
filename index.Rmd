@@ -125,11 +125,6 @@ Pedro Iraburu {#title}
 print_text_block(text_blocks, 'intro')
 ```
 
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
