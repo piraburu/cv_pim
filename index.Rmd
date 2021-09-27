@@ -69,7 +69,7 @@ if(PDF_EXPORT){
 
 Aside
 ================================================================================
-![logo](foto.jpeg){width=80%}
+![logo](foto.png){width=80%}
 
 <i class="fas fa-download"></i> Download this resume in [PDF](https://github.com/piraburu/cv_pim/blob/master/cv.pdf)
 or view online in [html](https://htmlpreview.github.io/?https://github.com/piraburu/cv_pim/blob/master/index.html)
@@ -84,7 +84,7 @@ Contact info {#contact}
 <i class="fa fa-phone"></i> 0031  687 613 348 <br />
 <i class="fa fa-github"></i> [GitHub: `@`piraburu](https://github.com/piraburu) <br />
 <i class="fab fa-linkedin"></i> [Linkedin](https://www.linkedin.com/in/pedro-iraburu-mu%C3%B1oz-24b533185/) <br />
-<i class="fas fa-home"></i> Dalsteindreef 3312
+<i class="fas fa-home"></i> Westerdijk 4, 1104, Utrecht
 
 Programming Skills {#skills}
 --------------------------------------------------------------------------------
@@ -126,7 +126,10 @@ print_text_block(text_blocks, 'intro')
 ```
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
